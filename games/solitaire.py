@@ -57,8 +57,9 @@ def run_game(stdscr):
     random.shuffle(deck)
     
     # Game state
-    tableau = [[[] for _ in range(7)] for _ in range(7)]  # 7 piles
-    foundation = [[], [], [], []]  # 4 foundations
+    # tableau is a list of 7 piles, each pile is a list of cards
+    tableau = [[] for _ in range(7)]
+    foundation = [[] for _ in range(4)]  # 4 foundations
     stock = []
     waste = []
     
@@ -66,7 +67,7 @@ def run_game(stdscr):
     for i in range(7):
         for j in range(i, 7):
             card = deck.pop()
-            tableau[j][i].append(card)
+            tableau[j].append(card)
     
     # Remaining cards go to stock
     stock = deck
@@ -79,7 +80,7 @@ def run_game(stdscr):
     # Game loop
     while True:
         # Draw everything
-        draw_game(stdscr, tableau, foundation, stock, waste, selected_pile, 
+        draw_game(stdscr, tableau, foundation, stock, waste, selected_pile,
                  selected_pile_type, selected_index, sh, sw)
         
         # Get input
