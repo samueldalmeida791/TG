@@ -17,7 +17,7 @@ def test_games():
     game_modules = [
         'snake', 'tetris', 'pong', 'hangman', 'tic_tac_toe',
         'game2048', 'minesweeper', 'sudoku', 'battleship',
-        'connect4', 'memory', 'quiz', 'launcher'
+        'connect4', 'memory', 'quiz', 'solitaire', 'launcher'
     ]
     
     print("Testing game modules...")

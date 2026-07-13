@@ -17,6 +17,7 @@ GAMES = {
     "connect4": "Connect 4 - Disc-dropping game",
     "memory": "Memory Card Game - Match pairs",
     "quiz": "Quiz Game - General knowledge",
+    "solitaire": "Solitaire - Klondike card game",
 }
 
 def list_games():
